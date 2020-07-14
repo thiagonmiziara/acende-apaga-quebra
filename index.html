@@ -4,26 +4,25 @@
 <head>
     <title>Acende Lampada</title>
     <meta charset="UTF-8">
+</head>
+
+<body>
+    <h2>Acenda e Quebre a Lâmpada</h2>
+    <img src="img/lampada-apagada.jpg" id="luz" onmousemove="mudaLampada('lampada-acesa')" onmouseout="mudaLampada('lampada-apagada')" onclick="mudaLampada('lampada-quebrada')" />
+
 
     <script>
         var quebrada = false;
 
         function mudaLampada(tipo) {
             if (!quebrada) {
-                document.getElementById("luz").src = "_imagens/" + tipo + ".jpg";
+                document.getElementById("luz").src = "img/" + tipo + ".jpg";
                 if (tipo == 'lampada-quebrada') {
                     quebrada = true;
                 }
             }
         }
     </script>
-
-</head>
-
-<body>
-    <h1>Acenda e Quebre a Lâmpada</h1>
-    <img src="_imagens/lampada-apagada.jpg" id="luz" onmousemove="mudaLampada('lampada-acesa')" onmouseout="mudaLampada('lampada-apagada')" onclick="mudaLampada('lampada-quebrada')" />
-
 </body>
 
 </html>
